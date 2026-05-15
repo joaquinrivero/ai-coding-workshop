@@ -1,4 +1,4 @@
-# Intermediate — Writing a Slash Command
+# 04-tooling / Apply — Build your /my-workflow slash command
 
 **Objective:** Write a `.claude/commands/` slash command that runs a multi-step preflight check. Test it.
 
@@ -49,3 +49,21 @@ The slash command produces a table like:
 4. Ran `/my-preflight` successfully with all checks passing.
 5. Introduced a deliberate failure and confirmed the slash command reported it as ❌.
 6. Can state the difference between a slash command and a CLAUDE.md in one sentence.
+
+## Workflow checkpoint
+
+Open `my-workflow.md` at the repo root. Fill in the Slash command section:
+
+```
+### Slash command (fill in after Module 04 Apply)
+Command: `/my-workflow`
+File: `.claude/commands/my-workflow.md`
+```
+
+Commit:
+```bash
+git add 04-tooling/apply/.claude/commands/my-workflow.md my-workflow.md
+git commit -m "04-tooling/apply: /my-workflow slash command built and tested"
+```
+
+**Next:** Module 05 Concept — run your complete workflow for the first time.
