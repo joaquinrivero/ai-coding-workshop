@@ -1,4 +1,4 @@
-# Intermediate — Prompting Techniques
+# 02-prompting / Apply — Write your workflow's prompt
 
 **Objective:** Apply chain-of-thought, few-shot, and role-prompting to the same task. Document when each technique changes output quality.
 
@@ -51,3 +51,21 @@ Few-shot: constrains the output format — if your examples show a specific tabl
 3. Filled in the observation table with at least one entry per technique.
 4. Can describe a task where chain-of-thought would not improve output quality (simple, deterministic tasks).
 5. Can describe a task where few-shot is necessary (when output format matters more than reasoning).
+
+## Workflow checkpoint
+
+Open `my-workflow.md` at the repo root. Fill in the Prompt section:
+
+```
+### Prompt (fill in after Module 02 Apply)
+Prompt file: `02-prompting/apply/workflow-prompt.md`
+Status: tested
+```
+
+Commit:
+```bash
+git add 02-prompting/apply/workflow-prompt.md 02-prompting/apply/notes.md my-workflow.md
+git commit -m "02-prompting/apply: workflow prompt written and tested"
+```
+
+**Next:** Module 03 Apply — scope the context Claude needs to run this prompt well.
