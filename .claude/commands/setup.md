@@ -88,3 +88,62 @@ If git identity is ❌:
 
 If any module is ❌:
 > "Run `git status` to check for missing files. If you cloned the repo but some files are missing, run `git pull`."
+
+## Step 6: Choose your workflow
+
+Your workshop builds one real automation end-to-end. Each Apply exercise adds one layer. By Module 04 you have a working `/my-workflow` slash command to keep.
+
+Ask the user: "What's one task you repeat at Adobe that you'd automate?"
+
+Good candidates:
+- Generating a commit message from a git diff
+- Summarizing yesterday's git log into standup bullet points
+- Writing a structured PR description from a diff
+- Screening a changed file for common bugs before committing
+- Drafting a response to a recurring support ticket type
+
+Once they name their task, create `my-workflow.md` in the repo root with this content (replace the placeholder with their actual task):
+
+```markdown
+# My workflow
+
+## What it does
+[their task — one sentence, e.g. "Generate a structured PR description from a git diff"]
+
+## Core 4 layers
+
+### Model (fill in after Module 01 Apply)
+Model: [FILL IN — claude-haiku-4-5 | claude-sonnet-4-6 | claude-opus-4-7]
+Reason: [FILL IN — one sentence]
+
+### Prompt (fill in after Module 02 Apply)
+Prompt file: `02-prompting/apply/workflow-prompt.md`
+Status: not started
+
+### Context (fill in after Module 03 Apply)
+CLAUDE.md: `03-context/apply/CLAUDE.md`
+Words: [FILL IN] / 200 max
+
+### Slash command (fill in after Module 04 Apply)
+Command: `/my-workflow`
+File: `.claude/commands/my-workflow.md`
+
+## Quality (fill in after Module 05 Apply)
+
+| Run | Quality (1-5) | Format match | Notes |
+|-----|--------------|--------------|-------|
+| 1   |              |              |       |
+| 2   |              |              |       |
+| 3   |              |              |       |
+
+Average quality: /5
+Consistency score: /5
+```
+
+Then stage and commit it:
+```bash
+git add my-workflow.md
+git commit -m "setup: workflow chosen"
+```
+
+Print: ✅ Workflow chosen. Each Apply exercise adds one layer to `my-workflow.md`.
