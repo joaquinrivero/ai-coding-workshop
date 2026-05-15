@@ -1,4 +1,4 @@
-# Intermediate — Model Routing
+# 01-model / Apply — Choose your workflow's model
 
 **Objective:** Write a classifier prompt that takes a task description and recommends Haiku, Sonnet, or Opus with reasoning.
 
@@ -40,3 +40,21 @@ Reason: Single-step summarization with no ambiguity — Haiku is fast enough and
 3. Classifier output includes a one-sentence reason for each recommendation.
 4. The classifier itself runs on Haiku (the routing decision is cheap to make).
 5. Can state the criteria you used to distinguish Haiku vs. Sonnet vs. Opus tasks.
+
+## Workflow checkpoint
+
+Open `my-workflow.md` at the repo root. Fill in the Model section:
+
+```
+### Model (fill in after Module 01 Apply)
+Model: claude-sonnet-4-6        ← replace with your choice
+Reason: Best balance of code understanding and speed for PR diffs
+```
+
+Commit:
+```bash
+git add 01-model/apply/notes.md my-workflow.md
+git commit -m "01-model/apply: model chosen for my workflow"
+```
+
+**Next:** Module 02 Apply — write the structured prompt for your workflow.
