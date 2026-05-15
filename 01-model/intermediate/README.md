@@ -2,7 +2,7 @@
 
 **Objective:** Write a classifier prompt that takes a task description and recommends Haiku, Sonnet, or Opus with reasoning.
 
-**Concept:** A routing heuristic avoids over-spending on Opus for tasks Haiku can handle. The classifier prompt is itself run through a model — typically Haiku, since the routing decision is a lightweight classification task. The output is a model name and a one-sentence reason.
+**Concept:** A routing heuristic avoids over-spending on Opus for tasks Haiku can handle. Run the classifier on Haiku — routing is a lightweight classification task. The output is a model name and a one-sentence reason.
 
 **Time:** 30 minutes
 

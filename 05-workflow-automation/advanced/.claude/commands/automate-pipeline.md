@@ -19,6 +19,7 @@ Wait for the response. Then:
 For bash (`pipeline.sh`):
 ```bash
 #!/bin/bash
+set -euo pipefail
 # Trigger: <document how this runs>
 PLACEHOLDER_1="${1:?Usage: pipeline.sh <placeholder1> [placeholder2]}"
 PLACEHOLDER_2="${2:-default}"

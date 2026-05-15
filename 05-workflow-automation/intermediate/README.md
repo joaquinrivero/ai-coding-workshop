@@ -13,6 +13,7 @@
 2. Copy `run.sh` to this directory as `run-scoped.sh`. Modify it to start Claude from this directory so the CLAUDE.md here is loaded:
 ```bash
 #!/bin/bash
+set -euo pipefail
 cd "$(dirname "$0")"
 claude --print "$(cat ../beginner/my-prompt.md)"
 ```

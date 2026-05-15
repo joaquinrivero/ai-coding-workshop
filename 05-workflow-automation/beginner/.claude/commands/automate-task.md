@@ -17,12 +17,14 @@ Based on the description, write:
 2. `05-workflow-automation/beginner/run.sh` — a bash script that calls:
 ```bash
 #!/bin/bash
+set -euo pipefail
 claude --print "$(cat "$(dirname "$0")/my-prompt.md")"
 ```
 
 If the task needs an input file or argument, substitute it into the prompt:
 ```bash
 #!/bin/bash
+set -euo pipefail
 INPUT="${1:-default-value}"
 PROMPT=$(sed "s|{{INPUT}}|$INPUT|g" "$(dirname "$0")/my-prompt.md")
 claude --print "$PROMPT"

@@ -24,6 +24,7 @@ Wait for the response. Then write `05-workflow-automation/intermediate/CLAUDE.md
 Write `05-workflow-automation/intermediate/run-scoped.sh`:
 ```bash
 #!/bin/bash
+set -euo pipefail
 cd "$(dirname "$0")"
 claude --print "$(cat ../beginner/my-prompt.md)"
 ```

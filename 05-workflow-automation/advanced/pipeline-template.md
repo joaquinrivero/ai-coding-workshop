@@ -20,6 +20,7 @@ Constraints: <what to omit or avoid>
 
 ```bash
 #!/bin/bash
+set -euo pipefail
 # Trigger: <how this runs — cron schedule, git hook, manual>
 INPUT="${1:?Usage: pipeline.sh <input>}"
 

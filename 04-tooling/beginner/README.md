@@ -13,7 +13,7 @@
 Run `git log --oneline -5` and summarize the last 5 commits.
 ```
 
-2. Observe: Claude should propose a Bash tool call. Approve it. Note:
+2. Observe: Claude should propose a Bash tool call. Approve it. Record:
    - The command Claude proposed (did it match what you asked?)
    - The permission prompt format
    - How Claude used the output

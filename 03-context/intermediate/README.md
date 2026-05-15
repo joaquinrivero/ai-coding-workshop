@@ -2,7 +2,7 @@
 
 **Objective:** Use `/context` to audit what is in the active context window. Identify noise. Trim it. Observe whether output quality changes.
 
-**Concept:** The context window contains everything Claude can see: CLAUDE.md files, files you have opened, conversation history, tool outputs. More context is not always better — irrelevant content dilutes the signal. Auditing and trimming the context window is a technique for improving output quality on focused tasks.
+**Concept:** The context window contains everything Claude can see: CLAUDE.md files, files you have opened, conversation history, tool outputs. More context is not always better — irrelevant content dilutes the signal. Auditing and trimming the context window improves output quality on focused tasks.
 
 **Time:** 30 minutes
 

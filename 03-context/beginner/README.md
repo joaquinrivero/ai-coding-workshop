@@ -15,7 +15,7 @@
 What is this project? What does it do, what conventions does it use, and what should I know before working in it?
 ```
 
-3. Read the response. Note:
+3. Read the response. Record:
    - What did Claude get right?
    - What did it guess or fabricate?
    - What is missing?
