@@ -1,4 +1,4 @@
-# Intermediate — Context Window Audit
+# 03-context / Apply — Scope context for your workflow
 
 **Objective:** Use `/context` to audit what is in the active context window. Identify noise. Trim it. Observe whether output quality changes.
 
@@ -43,3 +43,21 @@ After trimming: a response that stays on-topic for your question, without refere
 3. Started a fresh session with a minimal context (only files needed for the question).
 4. Asked the same question in both sessions and compared responses.
 5. Can describe one concrete technique for keeping the context window focused during a long session.
+
+## Workflow checkpoint
+
+Open `my-workflow.md` at the repo root. Fill in the Context section:
+
+```
+### Context (fill in after Module 03 Apply)
+CLAUDE.md: `03-context/apply/CLAUDE.md`
+Words: [your word count] / 200 max
+```
+
+Commit:
+```bash
+git add 03-context/apply/CLAUDE.md 03-context/apply/notes.md my-workflow.md
+git commit -m "03-context/apply: workflow CLAUDE.md written and trimmed"
+```
+
+**Next:** Module 04 Apply — wire prompt + context into a `/my-workflow` slash command.
