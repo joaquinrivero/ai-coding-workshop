@@ -1,6 +1,6 @@
 [FILL IN — replace this entire file with your capstone pipeline prompt]
 
-You are a [FILL IN — expert persona relevant to your pipeline's purpose].
+Role: [FILL IN — expert persona relevant to your pipeline's purpose]
 
 Context: [FILL IN — 2-5 sentences. Every sentence must be load-bearing. What is this pipeline for? What conventions must the output follow?]
 

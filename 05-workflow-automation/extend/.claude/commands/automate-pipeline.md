@@ -1,5 +1,5 @@
 ---
-description: Guide building the programmable pipeline. Reads pipeline-template.md and prompt.md, then helps adapt the prompt and write the wrapper script.
+description: Build a programmable pipeline by adapting prompt.md and writing a wrapper script.
 ---
 
 Read `05-workflow-automation/advanced/pipeline-template.md` to understand the pipeline structure.
