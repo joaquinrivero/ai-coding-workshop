@@ -27,7 +27,7 @@ Expected output format: `1.x.x` (exact version varies; any 1.x or later is fine)
 
 ```bash
 git clone <repo-url>
-cd agentic-coding-workshop
+cd ai-coding-workshop
 ```
 
 ## 4. Set your API key
@@ -76,7 +76,7 @@ All checks should show ✅. If any show ❌, see the troubleshooting table below
 | `claude --version` prints nothing | Installation incomplete | Run `npm install -g @anthropic-ai/claude-code` again |
 | `ANTHROPIC_API_KEY` shows ❌ in `/setup` | Key not exported in current shell | Run `export ANTHROPIC_API_KEY=<your-key>` in the same terminal where you run `claude` |
 | Git identity shows ❌ | `user.name` or `user.email` not set | `git config --global user.name "Name"` and `git config --global user.email "email"` |
-| `/setup` command not found | Claude not started from repo root | `cd agentic-coding-workshop && claude` |
+| `/setup` command not found | Claude not started from repo root | `cd ai-coding-workshop && claude` |
 
 ## Verification checklist
 

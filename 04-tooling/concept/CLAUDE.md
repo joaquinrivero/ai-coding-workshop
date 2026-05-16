@@ -1,6 +1,6 @@
-# CLAUDE.md — 04-tooling beginner
+# CLAUDE.md — 04-tooling concept
 
-- Exercise: 04-tooling beginner — Bash tool observation
+- Exercise: 04-tooling concept — Bash tool observation
 - Allowed tools: Bash (read-only commands only: `git log`, `node --version`, `ls`, `cat`)
 - Focus: observe permission prompts and the read→act→verify loop
 - Do not run commands that modify the filesystem (no `rm`, `mv`, `mkdir`, `touch`, `>`, `>>`).

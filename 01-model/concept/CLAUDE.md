@@ -1,6 +1,6 @@
-# CLAUDE.md — 01-model beginner
+# CLAUDE.md — 01-model concept
 
-- Exercise: 01-model beginner — model comparison
+- Exercise: 01-model concept — model comparison
 - Allowed tools: Bash (read-only: `claude --model`, `date`)
 - Focus: observe latency and output quality differences across Haiku, Sonnet, Opus
 - Do not modify prompt.md — it is the fixed comparison input

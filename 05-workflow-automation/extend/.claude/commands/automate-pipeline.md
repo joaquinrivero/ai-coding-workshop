@@ -2,9 +2,9 @@
 description: Build a programmable pipeline by adapting prompt.md and writing a wrapper script.
 ---
 
-Read `05-workflow-automation/advanced/pipeline-template.md` to understand the pipeline structure.
+Read `05-workflow-automation/extend/pipeline-template.md` to understand the pipeline structure.
 
-Read `05-workflow-automation/advanced/prompt.md` to see the starting prompt.
+Read `05-workflow-automation/extend/prompt.md` to see the starting prompt.
 
 Ask: "What real task from your team do you want this pipeline to run? Describe the task and what inputs it needs at runtime (dates, file paths, repo names, etc.)."
 
@@ -50,6 +50,6 @@ Print:
   pipeline.sh     written and executable
   Trigger:        <cron/hook/Makefile — what was configured>
 
-Test: bash 05-workflow-automation/advanced/pipeline.sh <your-args>
+Test: bash 05-workflow-automation/extend/pipeline.sh <your-args>
 ──────────────────────────────────────────────────────────────
 ```

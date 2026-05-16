@@ -8,13 +8,13 @@ Wait for the response.
 
 Based on the description, write:
 
-1. `05-workflow-automation/beginner/my-prompt.md` — a structured prompt for the task. Include:
+1. `05-workflow-automation/concept/my-prompt.md` — a structured prompt for the task. Include:
    - Role appropriate to the task
    - Context: what Claude needs to know about the input
    - Task: the specific instruction
    - Output format: length, structure, tone
 
-2. `05-workflow-automation/beginner/run.sh` — a bash script that calls:
+2. `05-workflow-automation/concept/run.sh` — a bash script that calls:
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -32,7 +32,7 @@ claude --print "$PROMPT"
 
 Make run.sh executable:
 ```bash
-chmod +x 05-workflow-automation/beginner/run.sh
+chmod +x 05-workflow-automation/concept/run.sh
 ```
 
 After writing both files, print:
@@ -42,7 +42,7 @@ After writing both files, print:
   run.sh         written and executable
 
 Run it:
-  bash 05-workflow-automation/beginner/run.sh
+  In Claude Code, type /automate "your input" to run your automation.
 
 If the output is too generic, add more context to my-prompt.md.
 ──────────────────────────────────────────────────────────────

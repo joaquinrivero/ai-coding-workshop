@@ -1,6 +1,6 @@
-# CLAUDE.md — agentic-coding-workshop
+# CLAUDE.md — ai-coding-workshop
 
-- Repo: agentic-coding-workshop
+- Repo: ai-coding-workshop
 - Purpose: hands-on workshop on the Core 4 of Agentic Coding (Model, Context, Tools, Prompts) + Workflow Automation capstone
 - Audience: Adobe engineers; all levels
 - Tone: direct, no filler, no motivational language

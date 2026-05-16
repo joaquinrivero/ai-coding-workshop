@@ -1,4 +1,4 @@
-# Agentic Coding Workshop
+# AI Coding Workshop
 
 A hands-on training repo for Adobe engineers. Five 90-minute modules covering the Core 4 of Agentic Coding — Model, Context, Tools, and Prompts — plus a capstone on Workflow Automation.
 
@@ -25,39 +25,39 @@ A hands-on training repo for Adobe engineers. Five 90-minute modules covering th
 ├── README.md               module overview and exercise table
 ├── CLAUDE.md               module-scoped context
 ├── concept/                compare model outputs on the same prompt (15 min)
-├── intermediate/           build a model routing heuristic (30 min)
-└── advanced/               build a two-stage triage pipeline (50 min)
+├── apply/                  build a model routing heuristic (30 min)
+└── extend/                 build a two-stage triage pipeline (50 min)
 02-prompting/
 ├── README.md
 ├── CLAUDE.md
 ├── concept/                rewrite a vague prompt as a structured one (15 min)
-├── intermediate/           compare chain-of-thought, few-shot, role-prompting (30 min)
-└── advanced/               write a meta-prompt that generates prompts (50 min)
+├── apply/                  compare chain-of-thought, few-shot, role-prompting (30 min)
+└── extend/                 write a meta-prompt that generates prompts (50 min)
 03-context/
 ├── README.md
 ├── CLAUDE.md
 ├── concept/                compare Claude with and without CLAUDE.md (15 min)
-├── intermediate/           audit and trim the active context window (30 min)
-└── advanced/               design a CLAUDE.md hierarchy for a mono-repo (50 min)
+├── apply/                  audit and trim the active context window (30 min)
+└── extend/                 design a CLAUDE.md hierarchy for a mono-repo (50 min)
 04-tooling/
 ├── README.md
 ├── CLAUDE.md
 ├── concept/                run Bash commands; observe the permission boundary (15 min)
-├── intermediate/           write a slash command preflight check (30 min)
-└── advanced/               configure an MCP server; write an MCP exercise (50 min)
+├── apply/                  write a slash command preflight check (30 min)
+└── extend/                 configure an MCP server; write an MCP exercise (50 min)
 05-workflow-automation/
 ├── README.md
 ├── CLAUDE.md
 ├── concept/                automate one weekly manual task (15 min)
-├── intermediate/           add scoped CLAUDE.md; measure consistency (30 min)
-└── advanced/               build a programmable pipeline as a triggered job (50 min)
+├── apply/                  add scoped CLAUDE.md; measure consistency (30 min)
+└── extend/                 build a programmable pipeline as a triggered job (50 min)
 ```
 
 ## Quick start
 
 ```bash
 git clone <repo-url>
-cd agentic-coding-workshop
+cd ai-coding-workshop
 export ANTHROPIC_API_KEY=<your-key>
 claude
 ```

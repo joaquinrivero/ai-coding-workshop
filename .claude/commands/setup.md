@@ -1,5 +1,5 @@
 ---
-description: Pre-session environment check for the Agentic Coding Workshop. Verifies Claude version, API key, git identity, and module files. Run this before the first session.
+description: Pre-session environment check for the AI Coding Workshop. Verifies Claude version, API key, git identity, and module files. Run this before the first session.
 ---
 
 Run all checks below in order. Then print a single status table summarizing results and any required fixes.
@@ -61,7 +61,7 @@ Fail: any module shows MISSING or no slash command path.
 After all checks, print this exact format:
 
 ```
-── Agentic Coding Workshop: pre-flight check ─────────────────
+── AI Coding Workshop: pre-flight check ─────────────────
 
   Claude version      X.X.X
   ANTHROPIC_API_KEY   ✅ set / ❌ not set

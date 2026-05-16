@@ -1,4 +1,4 @@
-Run a prereq and progress check for the Agentic Coding Workshop. Use bash tools throughout.
+Run a prereq and progress check for the AI Coding Workshop. Use bash tools throughout.
 
 ## Step 1: Check Claude CLI
 Run `claude --version`. Report the version. Flag if it's missing.
