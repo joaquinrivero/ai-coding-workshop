@@ -64,9 +64,9 @@ Each block: teach + exercise + debrief.
 01-model/ … 05-workflow-automation/
 ├── README.md               module overview
 ├── CLAUDE.md               module-scoped context
-├── concept/                15-min exercise
-├── apply/                  30-min exercise
-└── extend/                 50-min exercise
+├── concept/                introductory exercise
+├── apply/                  applied exercise
+└── extend/                 extended exercise
 ```
 
 ## Commands
