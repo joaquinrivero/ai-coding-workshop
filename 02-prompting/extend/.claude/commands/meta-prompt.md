@@ -2,9 +2,9 @@
 description: Test meta-prompt.md on three task descriptions and print the generated structured prompts. If meta-prompt.md does not exist, help write it first.
 ---
 
-Check whether `02-prompting/advanced/meta-prompt.md` exists:
+Check whether `02-prompting/extend/meta-prompt.md` exists:
 ```bash
-ls 02-prompting/advanced/meta-prompt.md 2>/dev/null
+ls 02-prompting/extend/meta-prompt.md 2>/dev/null
 ```
 
 If it does not exist:
@@ -13,7 +13,7 @@ Ask: "Describe what your meta-prompt should do. What constraints should the gene
 Wait for the response. Then help write `meta-prompt.md` based on the spec in README.md and the participant's constraints.
 
 If it exists:
-Read `02-prompting/advanced/meta-prompt.md`.
+Read `02-prompting/extend/meta-prompt.md`.
 
 Test it on these three inputs by calling:
 ```bash

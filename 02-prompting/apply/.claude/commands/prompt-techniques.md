@@ -2,7 +2,7 @@
 description: Guide through applying role-prompting, chain-of-thought, and few-shot to the ticket classification task. Runs each variant and prints outputs for comparison.
 ---
 
-Read `02-prompting/intermediate/README.md` steps 2–5 to understand the task.
+Read `02-prompting/apply/README.md` steps 2–5 to understand the task.
 
 Ask the participant: "Have you written your baseline, role, chain-of-thought, and few-shot variants? If yes, tell me the filenames. If no, I can help you write them now."
 
