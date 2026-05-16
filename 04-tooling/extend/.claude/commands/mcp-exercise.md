@@ -4,7 +4,7 @@ description: Run the MCP exercise. Checks whether an MCP server is configured, t
 
 Run `/mcp` to check which MCP servers are currently configured.
 
-If no MCP servers are configured: read `04-tooling/advanced/mcp-setup.md` and display the setup instructions. Ask the participant to configure one before continuing.
+If no MCP servers are configured: read `04-tooling/extend/mcp-setup.md` and display the setup instructions. Ask the participant to configure one before continuing.
 
 If MCP servers are configured: list them and ask which one to use for the exercise.
 

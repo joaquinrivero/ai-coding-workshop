@@ -6,7 +6,7 @@ Ask the participant: "Describe what your preflight command should check. List th
 
 Wait for the response. Then:
 
-Read `04-tooling/intermediate/preflight-template.md` to understand the format.
+Read `04-tooling/apply/preflight-template.md` to understand the format.
 
 Based on the participant's preconditions, produce a complete slash command markdown file. For each precondition:
 

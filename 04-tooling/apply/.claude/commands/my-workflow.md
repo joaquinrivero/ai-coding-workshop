@@ -1,3 +1,7 @@
+---
+description: [FILL IN — one sentence describing what your workflow produces]
+---
+
 [FILL IN — replace this entire file with your structured prompt from 02-prompting/apply/workflow-prompt.md]
 
 You are a [FILL IN — specific expert role].
