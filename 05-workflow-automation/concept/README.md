@@ -1,6 +1,6 @@
-# 05-workflow / Concept — See all four pillars fire together
+# 05-workflow / Concept — Run the full workflow
 
-Run your completed `/my-workflow` slash command for the first time. Watch all four Core 4 layers work together in one command.
+Run your completed `/my-workflow` slash command. Watch all four Core 4 layers work together.
 
 ## What you'll see
 
@@ -26,10 +26,10 @@ Open `my-workflow.md` and confirm all four sections are filled in.
    - The first thing you'd improve
 5. Commit: `git add 05-workflow-automation/concept/notes.md && git commit -m "05-workflow/concept: first run complete"`
 
-## Verification
+## Verification checklist
 
-- [ ] `/my-workflow` ran without errors
-- [ ] Output matched the format from your workflow-prompt.md
-- [ ] notes.md has three observations committed
+1. `/my-workflow` ran without errors.
+2. Output matched the format from your workflow-prompt.md.
+3. notes.md has three observations committed.
 
 **Next:** Apply — test your workflow's consistency across 3 fresh sessions.

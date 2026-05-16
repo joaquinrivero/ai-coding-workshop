@@ -1,8 +1,8 @@
-# Beginner — Model Comparison
+# 01-model / Concept — Compare model outputs
 
-**Objective:** Run the same prompt against Haiku, Sonnet, and Opus. Record latency and output quality differences. Fill in the observation table.
+**Objective:** Run the same prompt against Haiku, Sonnet, and Opus. Record latency and output quality.
 
-**Concept:** The three model tiers differ in capability, speed, and cost. Haiku is optimized for speed and low cost; Opus for depth and reasoning; Sonnet for the balance between them. Running the same prompt across all three makes the differences observable.
+**Concept:** Model tiers differ in capability, speed, and cost. Haiku optimizes for speed and low cost. Opus optimizes for depth and reasoning. Sonnet balances both. Compare one prompt across all three.
 
 **Time:** 15 minutes
 
@@ -10,7 +10,7 @@
 
 1. Run `/model-compare` to load the comparison prompt from `prompt.md`.
 
-2. The command runs the prompt against all three models in sequence. While it runs, note the time gap between the first and last response.
+2. Watch the command run the prompt against all three models. Note the time gap between first and last response.
 
 3. Read all three responses. Fill in the observation table:
 
@@ -25,7 +25,7 @@
 
 ## Expected output
 
-Three responses to the same prompt, produced sequentially. Haiku responds fastest. Opus is slowest and typically most thorough. Sonnet is between them on both dimensions.
+Three sequential responses to the same prompt. Haiku responds fastest. Opus is slowest and most thorough. Sonnet sits between them.
 
 ## Verification checklist
 

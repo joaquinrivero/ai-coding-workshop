@@ -1,8 +1,8 @@
 # 05-workflow / Apply — Test and tune your workflow
 
-**Objective:** Add a CLAUDE.md to the automation from the concept exercise. Run it 3 times. Measure whether scoped context changes output consistency.
+**Objective:** Add CLAUDE.md to the automation. Run it three times. Measure output consistency.
 
-**Concept:** A bare `claude --print` call has no scoped context — Claude uses whatever is in the global CLAUDE.md (or nothing). Adding a CLAUDE.md alongside the prompt scopes the automation: it tells Claude exactly what this script is for, what it can use, and what to ignore. Scoped context makes output more consistent across runs.
+**Concept:** A bare `claude --print` call has no scoped context. Claude uses global CLAUDE.md or nothing. Add CLAUDE.md beside the prompt to scope the automation. Scoped context makes output more consistent.
 
 **Time:** 30 minutes
 
@@ -10,7 +10,7 @@
 
 1. Start from the concept exercise: `my-prompt.md` and `run.sh` from `05-workflow-automation/concept/`.
 
-2. Copy `run.sh` to this directory as `run-scoped.sh`. Modify it to start Claude from this directory so the CLAUDE.md here is loaded:
+2. Copy `run.sh` to this directory as `run-scoped.sh`. Start Claude from this directory:
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -18,7 +18,7 @@ cd "$(dirname "$0")"
 ```
 Then in Claude Code, type your prompt from `../concept/my-prompt.md` directly in the chat.
 
-3. Review the `CLAUDE.md` in this directory — it serves as the automation's scoped context (since `run-scoped.sh` starts Claude here). Add constraints specific to your task:
+3. Review `CLAUDE.md` in this directory. It scopes the automation. Add constraints for your task:
    - What is this automation? (one sentence, if not already clear)
    - What tool can Claude use? (Bash for reading inputs, if needed)
    - What should Claude not do? (no file writes, no network calls, no branching logic)
@@ -33,7 +33,7 @@ Then in Claude Code, type your prompt from `../concept/my-prompt.md` directly in
 
 ## Expected output
 
-Three outputs that are structurally identical (same format, same sections) even if the specific content differs. If the outputs vary significantly, the prompt or CLAUDE.md is underspecified.
+Three outputs use the same format and sections. Specific content may differ. Large variation means the prompt or CLAUDE.md is underspecified.
 
 ## Verification checklist
 

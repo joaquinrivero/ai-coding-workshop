@@ -2,7 +2,7 @@
 
 > Complete Apply first. Come back here if you want to go deeper.
 
-<OBJECTIVE — one sentence describing the advanced exercise>.
+<OBJECTIVE — one sentence describing the extend exercise>.
 
 ## Steps
 
@@ -14,8 +14,8 @@
 
 <DESCRIBE_WHAT_DONE_LOOKS_LIKE>
 
-## Verification
+## Verification checklist
 
-- [ ] <artifact or output> exists
-- [ ] <second check>
-- [ ] <third check>
+1. <artifact or output> exists.
+2. <second check>.
+3. <third check>.

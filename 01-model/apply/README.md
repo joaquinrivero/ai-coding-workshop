@@ -1,21 +1,21 @@
 # 01-model / Apply — Choose your workflow's model
 
-**Objective:** Write a classifier prompt that takes a task description and recommends Haiku, Sonnet, or Opus with reasoning.
+**Objective:** Write a classifier prompt that recommends Haiku, Sonnet, or Opus.
 
-**Concept:** A routing heuristic avoids over-spending on Opus for tasks Haiku can handle. Run the classifier on Haiku — routing is a lightweight classification task. The output is a model name and a one-sentence reason.
+**Concept:** A routing heuristic avoids Opus for tasks Haiku can handle. Run the classifier on Haiku. Routing is a lightweight classification task. Output a model name and one-sentence reason.
 
 **Time:** 30 minutes
 
 ## Steps
 
-1. Read `routing-prompt.md`. This is the starting point — a rough classifier prompt that needs refinement.
+1. Read `routing-prompt.md`. It starts as a rough classifier prompt.
 
 2. Run `/model-router` to test the current classifier on three tasks:
    - "Summarize this 200-word blog post in one sentence."
    - "Design the data model for a multi-tenant SaaS billing system."
    - "Fix a typo in a README."
 
-3. Read the classifier's recommendations. For each task, decide whether you agree. If the classifier recommends Opus for the typo fix or Haiku for the billing system design, it is wrong.
+3. Read the classifier's recommendations. Decide whether you agree for each task. The typo fix should not use Opus. The billing system design should not use Haiku.
 
 4. Edit `routing-prompt.md` to correct the misclassifications. Common fixes:
    - Add explicit criteria for Haiku (fast, cheap, short output tasks)

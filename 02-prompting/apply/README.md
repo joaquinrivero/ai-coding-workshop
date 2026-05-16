@@ -1,8 +1,8 @@
 # 02-prompting / Apply — Write your workflow's prompt
 
-**Objective:** Apply chain-of-thought, few-shot, and role-prompting to the same task. Document when each technique changes output quality.
+**Objective:** Apply chain-of-thought, few-shot, and role-prompting. Document when each technique changes output quality.
 
-**Concept:** Three techniques work on different failure modes. Role-prompting helps when the default response assumes the wrong audience or expertise level. Chain-of-thought helps when the model jumps to conclusions instead of reasoning through a problem. Few-shot helps when the default output format does not match what you need.
+**Concept:** Three techniques address different failure modes. Role-prompting fixes the wrong audience or expertise level. Chain-of-thought helps when the model jumps to conclusions. Few-shot fixes mismatched output format.
 
 **Time:** 30 minutes
 
@@ -40,7 +40,7 @@ Tickets:
 
 Role-prompting: may change tone or expertise level but often does not change the classification result for a simple task.
 
-Chain-of-thought: surfaces the reasoning before the conclusion — more useful for ambiguous tickets where the classification is not obvious.
+Chain-of-thought: shows reasoning before the conclusion. It helps most with ambiguous tickets.
 
 Few-shot: constrains the output format — if your examples show a specific table format, the output matches it.
 

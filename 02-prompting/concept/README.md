@@ -1,14 +1,14 @@
-# Beginner — Prompt Rewrite
+# 02-prompting / Concept — Rewrite a prompt
 
-**Objective:** Take a one-liner task description, identify what it is missing, rewrite it as a structured prompt, and compare the outputs.
+**Objective:** Rewrite a one-line task as a structured prompt. Compare both outputs.
 
-**Concept:** A minimal prompt omits role, context, output format, and constraints. Claude fills in the gaps by guessing — often wrong. A structured prompt specifies all four. The output difference is observable and often large.
+**Concept:** A minimal prompt omits role, context, output format, and constraints. Claude fills gaps by guessing. A structured prompt specifies all four. The output difference is often large.
 
 **Time:** 15 minutes
 
 ## Steps
 
-1. Read `weak-prompt.md`. This is a one-liner prompt as a participant might first write it.
+1. Read `weak-prompt.md`. It shows a first-draft one-line prompt.
 
 2. Run `/prompt-rewrite` — this runs the weak prompt and prints the output.
 
@@ -20,7 +20,7 @@
 
 4. Write a structured version of the prompt. Add the missing elements. Save it as `strong-prompt.md` in this directory.
 
-5. Run `/prompt-rewrite` again — it detects `strong-prompt.md` and runs both versions, printing both outputs for comparison.
+5. Run `/prompt-rewrite` again. It detects `strong-prompt.md` and prints both outputs.
 
 ## Expected output
 

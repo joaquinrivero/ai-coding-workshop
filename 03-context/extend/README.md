@@ -1,8 +1,8 @@
-# Advanced — CLAUDE.md Hierarchy
+# 03-context / Extend — Design a CLAUDE.md hierarchy
 
-**Objective:** Design a CLAUDE.md hierarchy for a real mono-repo. Define what belongs at each level. Test it against 3 cross-package tasks.
+**Objective:** Design a CLAUDE.md hierarchy for a mono-repo. Define each level. Test three cross-package tasks.
 
-**Concept:** A CLAUDE.md hierarchy scopes context progressively. The root CLAUDE.md covers the whole repo: project purpose, global conventions, what never to do. Each package CLAUDE.md covers only that package: local conventions, allowed tools, dependencies, what the package owns and what it does not touch. Claude reads both when working in a package directory — the root first, then the package-level, so package rules override root rules when they conflict.
+**Concept:** A CLAUDE.md hierarchy scopes context progressively. Root CLAUDE.md covers project purpose, global conventions, and hard limits. Package CLAUDE.md covers local conventions, allowed tools, dependencies, ownership, and boundaries. Claude reads root context first, then package context. Package rules override root rules when they conflict.
 
 **Time:** 50 minutes
 
@@ -25,13 +25,13 @@
    - What this package does not own (do not touch X from here)
    - How to run this package's tests
 
-4. Design three cross-package tasks that a developer might ask Claude to help with. For each task, identify: which CLAUDE.md files are relevant? Write them down.
+4. Design three cross-package tasks. For each task, identify the relevant CLAUDE.md files. Write them down.
 
-5. Test each task in a Claude session. Check: does Claude's response respect both the root-level and package-level constraints?
+5. Test each task in Claude. Check whether the response respects root and package constraints.
 
 ## Expected output
 
-For each cross-package task: Claude's response correctly applies conventions from both CLAUDE.md files without contradicting itself. If a package-level rule conflicts with a root rule, the package-level rule takes precedence.
+For each cross-package task, Claude applies conventions from both CLAUDE.md files. It does not contradict itself. Package rules override root rules when they conflict.
 
 ## Verification checklist
 

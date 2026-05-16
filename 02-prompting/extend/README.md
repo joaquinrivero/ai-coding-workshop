@@ -1,8 +1,8 @@
-# Advanced — Meta-Prompt
+# 02-prompting / Extend — Write a meta-prompt
 
-**Objective:** Write a meta-prompt: a prompt that takes a rough task description and produces a production-quality structured prompt.
+**Objective:** Write a meta-prompt that turns rough tasks into structured prompts.
 
-**Concept:** A meta-prompt is a prompt that generates prompts. The input is a rough one-liner task description (as a user might first write it). The output is a structured prompt ready to use in production — with role, context, output format, and constraints filled in. This pattern is useful when you need to generate prompts at scale or help a team write consistent prompts.
+**Concept:** A meta-prompt generates prompts. It takes a rough task and returns a structured prompt. Use it to produce consistent prompts at scale.
 
 **Time:** 50 minutes
 
@@ -28,13 +28,13 @@ Constraints: <what to avoid>
    - "Find bugs in this Python function."
    - "Write release notes from a list of git commits."
 
-4. Read each generated prompt. For each one, check: could you send this to Claude as-is and get a useful response? If not, edit the meta-prompt to fix what is missing.
+4. Read each generated prompt. Check whether Claude could use it as-is. If not, edit the meta-prompt.
 
 5. Run one of the generated prompts through Claude to verify it produces a good output.
 
 ## Expected output
 
-For each test input, a structured prompt with all five fields filled in. The generated prompts should be specific enough to use directly.
+Each test input produces a structured prompt with all five fields. The generated prompts are specific enough to use directly.
 
 Example for "Summarize a pull request for a non-technical manager.":
 ```

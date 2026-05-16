@@ -18,11 +18,11 @@
 
 <DESCRIBE_WHAT_DONE_LOOKS_LIKE>
 
-## Verification
+## Verification checklist
 
-- [ ] <artifact> exists and has no [FILL IN] placeholders
-- [ ] my-workflow.md is updated
-- [ ] Changes are committed
+1. <artifact> exists and has no [FILL IN] placeholders.
+2. my-workflow.md is updated.
+3. Changes are committed.
 
 ## Workflow checkpoint
 

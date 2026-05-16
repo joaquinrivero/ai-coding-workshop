@@ -1,9 +1,11 @@
 # 03 — Context
 
-Context is what the agent knows before it starts. Without a CLAUDE.md, Claude infers context from file contents and directory names — it guesses. With a well-scoped CLAUDE.md, it knows exactly what the project is, what conventions to follow, and what it is allowed to do. This module teaches how to scope context precisely.
+Scope context before work starts.
+Without CLAUDE.md, Claude infers intent from files and paths.
+With scoped CLAUDE.md, Claude follows explicit project facts and rules.
 
 | Exercise | Time | What you build |
 |---|---|---|
-| Beginner | 15 min | Ask Claude to describe a repo with no CLAUDE.md, then add one and compare the two answers |
-| Intermediate | 30 min | Audit the active context window with `/context`; identify noise; trim it; observe whether output changes |
-| Advanced | 50 min | Design a CLAUDE.md hierarchy for a real mono-repo; test it against 3 cross-package tasks |
+| Concept | 15 min | Compare Claude with and without CLAUDE.md |
+| Apply | 30 min | Audit and trim the active context window |
+| Extend | 50 min | Design a CLAUDE.md hierarchy for a mono-repo |

@@ -1,8 +1,8 @@
 # 03-context / Apply — Scope context for your workflow
 
-**Objective:** Use `/context` to audit what is in the active context window. Identify noise. Trim it. Observe whether output quality changes.
+**Objective:** Use `/context` to audit active context. Identify noise. Trim it. Observe output changes.
 
-**Concept:** The context window contains everything Claude can see: CLAUDE.md files, files you have opened, conversation history, tool outputs. More context is not always better — irrelevant content dilutes the signal. Auditing and trimming the context window improves output quality on focused tasks.
+**Concept:** The context window contains everything Claude can see. This includes CLAUDE.md files, opened files, conversation history, and tool outputs. More context is not always better. Irrelevant content dilutes the signal.
 
 **Time:** 30 minutes
 
@@ -24,7 +24,7 @@ Read the output. The context window shows what Claude currently has loaded.
    - Long CLAUDE.md files with sections irrelevant to this task
    - Tool outputs from earlier commands that are no longer relevant
 
-5. Start a fresh session (`/clear` or open a new terminal). This time, use explicit file reads to load only the files needed for your question. Avoid asking any unrelated questions first.
+5. Start a fresh session with `/clear` or a new terminal. Load only the files needed for your question. Avoid unrelated questions first.
 
 6. Ask the same focused question.
 
@@ -34,7 +34,7 @@ Read the output. The context window shows what Claude currently has loaded.
 
 After `/context`: a summary of what is loaded — file names, approximate token counts, conversation turns.
 
-After trimming: a response that stays on-topic for your question, without references to files or earlier topics that are not relevant.
+After trimming: a focused response without references to irrelevant files or earlier topics.
 
 ## Verification checklist
 

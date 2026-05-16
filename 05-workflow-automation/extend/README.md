@@ -1,8 +1,8 @@
-# Advanced — Programmable Pipeline
+# 05-workflow / Extend — Build a programmable pipeline
 
-**Objective:** Build a programmable pipeline: a `prompt.md` with `{{PLACEHOLDERS}}` plus a thin wrapper script (bash, python, or TypeScript) that substitutes runtime values and calls the Claude CLI. The pipeline runs as a scheduled or triggered job.
+**Objective:** Build a programmable pipeline. Use `prompt.md` with `{{PLACEHOLDERS}}` and a thin wrapper script. Run it on a schedule or trigger.
 
-**Concept:** A raw bash wrapper is brittle: the task and the runner are tangled. A programmable pipeline separates them. `prompt.md` is the specification — it describes what Claude should do, with `{{PLACEHOLDERS}}` for runtime values. The wrapper substitutes the values and calls Claude. To change what Claude does, edit `prompt.md`. To change how it runs (on a schedule, on a webhook, on a file change), edit the wrapper. Neither change requires touching the other.
+**Concept:** A raw bash wrapper tangles the task and runner. A programmable pipeline separates them. `prompt.md` defines the task with `{{PLACEHOLDERS}}` for runtime values. The wrapper substitutes values and calls Claude. Edit `prompt.md` to change the task. Edit the wrapper to change when it runs.
 
 **Time:** 50 minutes
 
@@ -10,9 +10,9 @@
 
 1. Read `pipeline-template.md` in this directory. It shows the structure for a programmable pipeline.
 
-2. Read `prompt.md`. This is the starting prompt — adapt it to a real task from your team.
+2. Read `prompt.md`. Adapt it to a real task from your team.
 
-3. Adapt `prompt.md` for your task. Replace the placeholder task description with your task. Add `{{PLACEHOLDERS}}` for values that change at runtime (date, file path, repo name, etc.).
+3. Adapt `prompt.md` for your task. Replace the placeholder task. Add `{{PLACEHOLDERS}}` for runtime values.
 
 4. Write the wrapper script. Choose one:
    - `pipeline.sh` (bash) — substitute placeholders with `sed`; call `claude --print`

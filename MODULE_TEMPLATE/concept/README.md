@@ -24,8 +24,8 @@ Observe how <TOPIC> affects <OUTCOME> by running the provided script.
 
 <DESCRIBE_WHAT_DONE_LOOKS_LIKE>
 
-## Verification
+## Verification checklist
 
-- [ ] Script ran without errors
-- [ ] Observation table is filled in notes.md
-- [ ] You can explain the pattern in one sentence
+1. Script ran without errors.
+2. Observation table is filled in notes.md.
+3. You can explain the pattern in one sentence.

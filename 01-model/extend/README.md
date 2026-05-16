@@ -1,8 +1,8 @@
-# Advanced — Two-Stage Triage Pipeline
+# 01-model / Extend — Build a triage pipeline
 
-**Objective:** Build a two-stage pipeline where a Haiku triage call routes to Sonnet or Opus based on task complexity. Measure real latency and estimated cost per task.
+**Objective:** Build a two-stage pipeline. Route tasks by complexity. Measure latency and estimated cost.
 
-**Concept:** The routing heuristic from the intermediate exercise becomes a live pipeline here. Stage 1 (Haiku) classifies the task. Stage 2 executes it on the recommended model. The total pipeline is: Haiku overhead + execution time on the routed model. For simple tasks, this is faster and cheaper than always using Opus. For complex tasks, the Haiku overhead is negligible.
+**Concept:** Turn the Apply routing heuristic into a live pipeline. Stage 1 uses Haiku to classify the task. Stage 2 runs the task on the recommended model. This beats always using Opus for simple tasks. For complex tasks, the Haiku overhead is negligible.
 
 **Time:** 50 minutes
 
@@ -26,7 +26,7 @@
    - A moderate task (should route to Sonnet): "Review this function for edge cases: `function divide(a, b) { return a / b; }`"
    - A complex task (should route to Opus): "Design a distributed rate limiter for a multi-region API with 100k RPS."
 
-5. Compare total latency and estimated cost (input tokens × $0.000003/token for Haiku, $0.000015/token for Sonnet, $0.000075/token for Opus) against a baseline that always uses Opus.
+5. Compare total latency and estimated cost against an Opus-only baseline.
 
 ## Expected output
 

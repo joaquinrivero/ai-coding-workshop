@@ -1,6 +1,6 @@
 # AI Coding Workshop
 
-A hands-on training repo for Adobe engineers. Five 90-minute modules covering the Core 4 of Agentic Coding — Model, Context, Tools, and Prompts — plus a capstone on Workflow Automation.
+Hands-on training for Adobe engineers. Five modules cover Model, Context, Tools, Prompts, and Workflow Automation.
 
 ## Who this is for
 
@@ -85,10 +85,17 @@ Each block: 25 min teach + 50 min exercise + 15 min debrief.
 
 ## The Core 4
 
-Every agentic coding task involves four decisions: which **model** to use (cost vs. capability), what **context** to give it (scope precisely or it guesses), which **tools** to enable (Bash, slash commands, MCP), and how to write the **prompt** (a vague spec produces vague output). The capstone module — Workflow Automation — is where these four combine into a real automated task. Each module teaches one decision; the capstone teaches how they interact.
+Every AI coding task makes four decisions:
+
+- **Model:** choose cost and capability.
+- **Context:** scope facts and rules precisely.
+- **Tools:** enable Bash, slash commands, or MCP.
+- **Prompt:** write a clear specification.
+
+Workflow Automation combines all four into one real task.
 
 ## Commands
 
 | Command | When to run | What it does |
 |---|---|---|
-| `/setup` | Before the first session | Checks Claude version, API key, git identity, and presence of all module files. Prints a pass/fail table. |
+| `/setup` | Before the first session | Checks Claude, API key, git identity, and module files. |

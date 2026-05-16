@@ -1,14 +1,14 @@
-# Beginner — CLAUDE.md Before and After
+# 03-context / Concept — Compare CLAUDE.md output
 
 **Objective:** Ask Claude to describe a project with no CLAUDE.md. Add a CLAUDE.md. Ask again. Compare the two answers.
 
-**Concept:** Without a CLAUDE.md, Claude reads file names and directory structure and guesses what the project is. With a CLAUDE.md, Claude reads explicit context first. The difference shows how much of Claude's default behavior is inference from signals rather than from facts you provided.
+**Concept:** Without CLAUDE.md, Claude guesses from file names and directory structure. With CLAUDE.md, Claude reads explicit context first. Compare inference against stated facts.
 
 **Time:** 15 minutes
 
 ## Steps
 
-1. Find a directory on your machine that has no CLAUDE.md — your own project repo, or any other directory with a few files. Note its path.
+1. Find a directory with no CLAUDE.md. Use your own repo or any directory with a few files. Note its path.
 
 2. Open a Claude session in that directory. Ask:
 ```
@@ -36,7 +36,7 @@ What is this project? What does it do, what conventions does it use, and what sh
 
 ## Expected output
 
-Without CLAUDE.md: Claude describes what it can infer from file names and structure. May include hedging ("I think", "it appears") or incorrect details.
+Without CLAUDE.md: Claude describes what it infers from file names and structure. It may hedge or include incorrect details.
 
 With CLAUDE.md: Claude states facts from the context file directly, without hedging, and includes the specifics you wrote.
 
