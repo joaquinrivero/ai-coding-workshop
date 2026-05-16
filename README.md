@@ -20,7 +20,7 @@ cd ai-coding-workshop
 claude
 ```
 
-Inside the Claude session:
+Then run:
 
 ```
 /setup
@@ -58,10 +58,10 @@ Each block: teach + exercise + debrief.
 .claude/
 ├── commands/
 │   └── setup.md            /setup — pre-session environment check
-└── settings.json
+└── settings.json           tool permissions
 00-installation/
 └── README.md               install Claude Code, clone, verify, troubleshoot
-01-model/ … 05-workflow-automation/
+01-model/ 02-prompting/ 03-context/ 04-tooling/ 05-workflow-automation/
 ├── README.md               module overview
 ├── CLAUDE.md               module-scoped context
 ├── concept/                introductory exercise
@@ -73,4 +73,4 @@ Each block: teach + exercise + debrief.
 
 | Command | When to run | What it does |
 |---|---|---|
-| `/setup` | Before the first session | Checks Claude auth, git identity, and module files. |
+| `/setup` | Before the first session | Checks Claude auth, git identity, and module files |
