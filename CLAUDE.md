@@ -13,4 +13,3 @@
 - Each module has its own scoped CLAUDE.md — read it before starting exercises in that module
 - Style: apply unix style to all written artifacts (verb-first, under 20 words/sentence, no filler)
 - MODULE_TEMPLATE/ is the authority for adding new modules
-- No claude -p, no API keys — all exercises run interactively in Claude Code
