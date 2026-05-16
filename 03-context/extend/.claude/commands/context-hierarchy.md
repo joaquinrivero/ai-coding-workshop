@@ -4,7 +4,7 @@ description: Guide the CLAUDE.md hierarchy design. Reviews the participant's roo
 
 Check whether `root-CLAUDE.md` exists in this directory:
 ```bash
-ls 03-context/advanced/root-CLAUDE.md 2>/dev/null
+ls 03-context/extend/root-CLAUDE.md 2>/dev/null
 ```
 
 If it does not exist:
