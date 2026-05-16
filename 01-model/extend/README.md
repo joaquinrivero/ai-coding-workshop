@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. Read `01-model/intermediate/routing-prompt.md`. You will use this as Stage 1.
+1. Read `01-model/apply/routing-prompt.md`. You will use this as Stage 1.
 
 2. Design the pipeline:
    - Stage 1: pass the task description through the classifier on Haiku. Parse the recommendation (haiku/sonnet/opus).

@@ -1,3 +1,7 @@
+---
+description: Classify a task and recommend the best Claude model.
+---
+
 You are a model routing assistant. Apply the routing rules below to classify the given task and recommend the best Claude model.
 
 Routing rules:

@@ -2,11 +2,11 @@
 description: Guide the participant through building the two-stage triage pipeline. Reads the intermediate routing-prompt.md and helps write pipeline.sh.
 ---
 
-Read `01-model/intermediate/routing-prompt.md` to understand the Stage 1 classifier.
+Read `01-model/apply/routing-prompt.md` to understand the Stage 1 classifier.
 
-Read `01-model/advanced/README.md` to understand the pipeline spec.
+Read `01-model/extend/README.md` to understand the pipeline spec.
 
-Help the participant write `01-model/advanced/pipeline.sh`. The script must:
+Help the participant write `01-model/extend/pipeline.sh`. The script must:
 
 1. Accept a task description as `$1`.
 2. Call the Haiku classifier (Stage 1) with the task description substituted into routing-prompt.md.

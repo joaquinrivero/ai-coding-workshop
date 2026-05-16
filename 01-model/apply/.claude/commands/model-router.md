@@ -2,7 +2,7 @@
 description: Test the routing-prompt.md classifier on three tasks. Runs each task description through the classifier on Haiku and prints the recommendation and reason.
 ---
 
-Read `01-model/intermediate/routing-prompt.md` to get the classifier prompt.
+Read `01-model/apply/routing-prompt.md` to get the classifier prompt.
 
 For each of the following task descriptions, run the classifier on Haiku:
 
