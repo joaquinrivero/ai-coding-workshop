@@ -1,6 +1,6 @@
-# CLAUDE.md — 03-context beginner
+# CLAUDE.md — 03-context concept
 
-- Exercise: 03-context beginner — CLAUDE.md before and after
+- Exercise: 03-context concept — CLAUDE.md before and after
 - Allowed tools: Bash (read-only: `ls`, `cat`), Read, Write
 - Focus: observe Claude's behavior without CLAUDE.md, then with it
 - The CLAUDE.md you write goes in the target directory, not this exercise directory

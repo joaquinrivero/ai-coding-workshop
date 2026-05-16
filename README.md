@@ -24,31 +24,31 @@ A hands-on training repo for Adobe engineers. Five 90-minute modules covering th
 01-model/
 ├── README.md               module overview and exercise table
 ├── CLAUDE.md               module-scoped context
-├── beginner/               compare model outputs on the same prompt (15 min)
+├── concept/                compare model outputs on the same prompt (15 min)
 ├── intermediate/           build a model routing heuristic (30 min)
 └── advanced/               build a two-stage triage pipeline (50 min)
 02-prompting/
 ├── README.md
 ├── CLAUDE.md
-├── beginner/               rewrite a vague prompt as a structured one (15 min)
+├── concept/                rewrite a vague prompt as a structured one (15 min)
 ├── intermediate/           compare chain-of-thought, few-shot, role-prompting (30 min)
 └── advanced/               write a meta-prompt that generates prompts (50 min)
 03-context/
 ├── README.md
 ├── CLAUDE.md
-├── beginner/               compare Claude with and without CLAUDE.md (15 min)
+├── concept/                compare Claude with and without CLAUDE.md (15 min)
 ├── intermediate/           audit and trim the active context window (30 min)
 └── advanced/               design a CLAUDE.md hierarchy for a mono-repo (50 min)
 04-tooling/
 ├── README.md
 ├── CLAUDE.md
-├── beginner/               run Bash commands; observe the permission boundary (15 min)
+├── concept/                run Bash commands; observe the permission boundary (15 min)
 ├── intermediate/           write a slash command preflight check (30 min)
 └── advanced/               configure an MCP server; write an MCP exercise (50 min)
 05-workflow-automation/
 ├── README.md
 ├── CLAUDE.md
-├── beginner/               automate one weekly manual task (15 min)
+├── concept/                automate one weekly manual task (15 min)
 ├── intermediate/           add scoped CLAUDE.md; measure consistency (30 min)
 └── advanced/               build a programmable pipeline as a triggered job (50 min)
 ```
