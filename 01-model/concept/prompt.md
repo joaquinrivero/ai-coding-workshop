@@ -1,3 +1,6 @@
-You are a senior software engineer. A colleague asks: "We need to add rate limiting to our REST API. What are the main approaches, and what would you recommend for a Node.js service with 10k requests per minute?"
+List every bug. One short bullet each, no fixes.
 
-Answer in plain text. Be specific about trade-offs.
+function median(nums) {
+  const sorted = nums.sort();
+  return sorted[Math.floor(sorted.length / 2)];
+}
