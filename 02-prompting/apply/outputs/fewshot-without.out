@@ -1,0 +1,3 @@
+- **PR #481**: Adds per-IP rate limiting middleware to `/api/v2/*` endpoints, configurable with a 100 req/min default.
+- **PR #482**: Fixes a session store race condition that caused spurious logouts during concurrent requests.
+- **PR #483**: Migrates the email queue to SendGrid v3 and drops the deprecated v2 fallback.

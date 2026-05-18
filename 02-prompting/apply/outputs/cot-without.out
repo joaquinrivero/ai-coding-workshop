@@ -1,0 +1,1 @@
+Yes, this is a bug — likely a cache or polling/refresh issue triggered when the tab regains focus after being idle.

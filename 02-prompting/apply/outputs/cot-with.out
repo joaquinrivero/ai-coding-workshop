@@ -1,0 +1,31 @@
+## 1. Possible technical causes
+
+1. **No refetch on tab focus** — dashboard fetches once on mount; nothing re-runs when the tab regains visibility.
+2. **Background-tab throttling** — browsers throttle `setInterval`/`setTimeout` in hidden tabs (often to ≥1/min). If polling exists, it crawls or pauses.
+3. **WebSocket/SSE silently disconnected** — proxies, load balancers, or the browser kill idle long-lived connections; without reconnect logic, no pushes arrive.
+4. **Stale client cache** — React Query / SWR / Apollo / service worker / HTTP `Cache-Control` serves cached data past its useful life; no revalidation on focus.
+5. **Auth token expired mid-idle** — refetch fails silently after expiry, error is swallowed, old UI data remains.
+6. **State store never invalidates** — Redux/Zustand/etc. holds the first response indefinitely with no TTL or staleness tracking.
+7. **Server-side staleness** — API cache or read-replica lag returning old rows.
+8. **Recent regression** — a deploy in the last ~week changed any of the above.
+
+## 2. Bug vs. expected, with the assumption each rests on
+
+| # | Verdict | Assumption it depends on |
+|---|---------|--------------------------|
+| 1 | Bug if product is positioned as "live"; expected if it's a static report | Product intent for the dashboard is real-time / "current" |
+| 2 | Browser behavior is expected; **not compensating** is a bug | App is supposed to keep polling; throttling is well-known and should be handled with the Page Visibility API |
+| 3 | Bug | Push-based updates are in use and reconnection isn't implemented |
+| 4 | Bug | Cache TTL / revalidation policy doesn't match how fresh users expect data |
+| 5 | Bug | Auth refresh or error surfacing is missing |
+| 6 | Bug | Dashboard is meant to reflect current state, not a snapshot |
+| 7 | Bug if unintended; expected if there's a known caching SLA | Backend's freshness contract is tighter than what's being served |
+| 8 | Bug (by definition — regression) | The dashboard previously stayed fresh in this scenario |
+
+## 3. Verdict
+
+**Yes, this is a bug** — and almost certainly a recent regression.
+
+The decisive signal is "it's been happening for about a week." A user only notices stale-after-idle if it didn't used to happen, which rules out "expected by design." Combined with the trigger pattern (tab left open, then returned to), the most probable causes are #1, #2, or #4: focus-based revalidation broke, was removed, or a cache config tightened in a deploy ~1 week ago.
+
+**Next step I'd take:** check what shipped in the last 7–10 days touching fetch logic, query-client config, service worker, `Cache-Control` headers, or visibility/focus handlers — and confirm whether DevTools shows a network request firing when the tab regains focus.
