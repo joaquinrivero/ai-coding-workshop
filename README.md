@@ -15,7 +15,7 @@ Five modules covering the Core 4 of agentic coding — Model, Context, Tools, an
 ## Quick start
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/joaquinrivero/ai-coding-workshop.git
 cd ai-coding-workshop
 claude
 ```

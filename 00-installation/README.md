@@ -26,7 +26,7 @@ Expected output format: `1.x.x` (exact version varies; any 1.x or later is fine)
 ## 3. Clone the workshop repo
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/joaquinrivero/ai-coding-workshop.git
 cd ai-coding-workshop
 ```
 
