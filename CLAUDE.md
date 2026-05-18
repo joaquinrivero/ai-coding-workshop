@@ -9,7 +9,6 @@
 - Every exercise README ends with a numbered Verification checklist
 - CLAUDE.md files: under 30 lines, bullet list, no prose philosophy
 - Slash commands: YAML frontmatter with description field, imperative body
-- Do not modify 04-tooling/ — that module is complete
 - Each module has its own scoped CLAUDE.md — read it before starting exercises in that module
 - Style: apply unix style to all written artifacts (verb-first, under 20 words/sentence, no filler)
 - MODULE_TEMPLATE/ is the authority for adding new modules

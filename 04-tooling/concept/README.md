@@ -1,4 +1,4 @@
-# Beginner — Bash Tool
+# 04-tooling / Concept — Bash Tool
 
 **Objective:** Run a shell command from inside a Claude session. Observe the read→act→verify loop and identify the permission boundary.
 

@@ -1,4 +1,4 @@
-# Advanced — MCP Server
+# 04-tooling / Extend — MCP Server
 
 **Objective:** Configure one MCP server (filesystem or fetch). Write an exercise where the agent uses it to gather context it could not read from files alone.
 

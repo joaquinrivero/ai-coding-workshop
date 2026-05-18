@@ -4,6 +4,6 @@ Claude's default knowledge comes from training data and file contents. Tools ext
 
 | Exercise | Time | What you build |
 |---|---|---|
-| Beginner | 15 min | Run a Bash command from inside a Claude session; observe the permission boundary |
-| Intermediate | 30 min | Write a slash command that runs a multi-step preflight check |
-| Advanced | 50 min | Configure an MCP server; write an exercise that uses it |
+| Concept | 15 min | Run a Bash command from inside a Claude session; observe the permission boundary |
+| Apply | 30 min | Write a slash command that runs a multi-step preflight check |
+| Extend | 50 min | Configure an MCP server; write an exercise that uses it |
