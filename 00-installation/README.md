@@ -5,7 +5,11 @@ Complete these steps before the first session. Estimated time: 15 minutes.
 ## Prerequisites
 
 - macOS or Linux
-- Node.js 18 or later: `node --version` should print `v18.x.x` or higher
+- Node.js 18+: `brew install node` if not installed. No Homebrew yet?
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 - git: `git --version` should print a version
 - Claude Code subscription (enterprise — no separate API key needed; `claude auth login` handles auth)
 
