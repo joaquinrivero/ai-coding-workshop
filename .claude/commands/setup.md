@@ -1,5 +1,5 @@
 ---
-description: Pre-session environment check for the AI Coding Workshop. Verifies Claude version, API key, git identity, and module files. Run this before the first session.
+description: Pre-session environment check for the AI Coding Workshop. Verifies Claude auth, git identity, and module files. Run this before the first session.
 ---
 
 Run all checks below in order. Then print a single status table summarizing results and any required fixes.
@@ -13,17 +13,20 @@ claude --version
 
 Record the version string.
 
-## Check 2 — API key
+## Check 2 — Claude auth
 
 Run:
 ```bash
-echo ${#ANTHROPIC_API_KEY}
+claude auth status
 ```
 
-Pass: output is a number greater than 0.
-Fail: output is 0 or empty.
+Pass: output shows a signed-in subscription account.
+Fail: output shows no active Claude Code auth.
 
-Fix if failing: set `ANTHROPIC_API_KEY` in your shell environment or copy `.env.sample` to `.env` and add your key.
+Fix if failing:
+```bash
+claude auth login
+```
 
 ## Check 3 — Git identity
 
@@ -64,7 +67,7 @@ After all checks, print this exact format:
 ── AI Coding Workshop: pre-flight check ─────────────────
 
   Claude version      X.X.X
-  ANTHROPIC_API_KEY   ✅ set / ❌ not set
+  Claude auth         ✅ signed in / ❌ not signed in
   Git identity        ✅ name + email set / ❌ missing  [fix command if ❌]
   01-model            ✅ ready / ❌ files missing
   02-prompting        ✅ ready / ❌ files missing
@@ -80,8 +83,8 @@ After all checks, print this exact format:
 If everything is ✅:
 > "You're ready — start with 00-installation/README.md and work through each module in order."
 
-If ANTHROPIC_API_KEY is ❌:
-> "Set ANTHROPIC_API_KEY before starting. Copy .env.sample to .env and add your key, or export it in your shell."
+If Claude auth is ❌:
+> "Sign in before starting: `claude auth login`."
 
 If git identity is ❌:
 > "Set git identity before starting — several exercises require a clean working tree and commits."

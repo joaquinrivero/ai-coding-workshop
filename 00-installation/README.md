@@ -7,7 +7,7 @@ Complete these steps before the first session. Estimated time: 15 minutes.
 - macOS or Linux
 - Node.js 18 or later: `node --version` should print `v18.x.x` or higher
 - git: `git --version` should print a version
-- An Anthropic API key (from console.anthropic.com) or a Claude Code subscription
+- Claude Code subscription (enterprise — no separate API key needed; `claude auth login` handles auth)
 
 ## 1. Install Claude Code
 
@@ -30,27 +30,17 @@ git clone https://github.com/joaquinrivero/ai-coding-workshop.git
 cd ai-coding-workshop
 ```
 
-## 4. Set your API key
-
-Copy the sample environment file:
+## 4. Sign in to Claude Code
 
 ```bash
-cp .env.sample .env
+claude auth login
 ```
 
-Open `.env` and set your key:
-
-```
-ANTHROPIC_API_KEY=sk-ant-...
-```
-
-Then load it into your shell:
+Verify your subscription auth:
 
 ```bash
-export ANTHROPIC_API_KEY=$(grep ANTHROPIC_API_KEY .env | cut -d= -f2)
+claude auth status
 ```
-
-Or add the export to your `~/.zshrc` / `~/.bashrc` so it persists across sessions.
 
 ## 5. Run the preflight check
 
@@ -74,13 +64,13 @@ All checks should show ✅. If any show ❌, see the troubleshooting table below
 |---|---|---|
 | `command not found: claude` | Claude Code not installed or not in PATH | Re-run `npm install -g @anthropic-ai/claude-code`; confirm with `which claude` |
 | `claude --version` prints nothing | Installation incomplete | Run `npm install -g @anthropic-ai/claude-code` again |
-| `ANTHROPIC_API_KEY` shows ❌ in `/setup` | Key not exported in current shell | Run `export ANTHROPIC_API_KEY=<your-key>` in the same terminal where you run `claude` |
+| Claude auth shows ❌ in `/setup` | Claude Code is not signed in | Run `claude auth login` |
 | Git identity shows ❌ | `user.name` or `user.email` not set | `git config --global user.name "Name"` and `git config --global user.email "email"` |
 | `/setup` command not found | Claude not started from repo root | `cd ai-coding-workshop && claude` |
 
 ## Verification checklist
 
 1. `claude --version` prints a version string.
-2. `ANTHROPIC_API_KEY` is set and non-empty in the current shell.
+2. `claude auth status` shows a signed-in subscription account.
 3. `git config user.name` and `git config user.email` both return values.
 4. `/setup` runs inside a Claude session and all checks show ✅.
