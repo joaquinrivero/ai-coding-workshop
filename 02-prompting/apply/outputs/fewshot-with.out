@@ -1,0 +1,3 @@
+[PR #481] Rate limiting on /api/v2/* | Risk: med | Test: verify threshold enforcement, check headers, confirm legit traffic not blocked
+[PR #482] Fix session store race condition | Risk: high | Test: concurrent request stress test, verify no spurious logouts
+[PR #483] Migrate email queue to SendGrid v3 | Risk: med | Test: send test emails through queue, verify v2 removal doesn't break edge cases

@@ -1,0 +1,1 @@
+Likely hitting a client-side memory ceiling or a server upload limit — both are common around the 10MB mark. What browser + version are you on, and does the crash happen mid-upload or the moment you select the file?
