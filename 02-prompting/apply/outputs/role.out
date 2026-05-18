@@ -1,0 +1,14 @@
+Triage:
+
+| # | Ticket | Type | Priority | Reasoning |
+|---|---|---|---|---|
+| 1 | App crashes on >10MB upload | **Bug** | **P1** | Crash = data loss risk, hard-blocks a core action |
+| 2 | Add dark mode | Feature | **P3** | Cosmetic. No one is blocked |
+| 3 | Login broken on Safari 16 | **Bug** | **P1** | Locks out an entire browser segment from the product. Fix tonight |
+| 4 | Export to CSV | Feature | **P3** | "Would be nice" = backlog |
+| 5 | App feels slow sometimes | **Bug** | **P2** | Real signal, unreproducible as written. Needs repro + telemetry pull, not a midnight fix |
+| 6 | Per-project notification config | Feature | **P2** | Functional gap, daily friction. Schedule, don't ship at 2am |
+
+**Tonight:** #1 and #3. Page the owner of upload and the owner of auth/web.
+**This week:** #5 (get a repro), #6 (scope it).
+**Backlog:** #2, #4.

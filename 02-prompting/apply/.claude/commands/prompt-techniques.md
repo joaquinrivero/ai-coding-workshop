@@ -1,26 +1,36 @@
 ---
-description: Guide through applying role-prompting, chain-of-thought, and few-shot to the ticket classification task. Runs each variant and prints outputs for comparison.
+description: Print pre-recorded outputs for the four prompt variants (baseline, role, chain-of-thought, few-shot) under labeled headings. Instant — no model calls.
 ---
 
-Read `02-prompting/apply/README.md` steps 2–5 to understand the task.
+Print the pre-recorded outputs for each variant under a labeled heading. Run the four commands below sequentially, exactly as written, and print the file contents after each heading.
 
-Ask the participant: "Have you written your baseline, role, chain-of-thought, and few-shot variants? If yes, tell me the filenames. If no, I can help you write them now."
+```
+── Baseline ──────────────────────────────────────────────────
+```
+Print the contents of `02-prompting/apply/outputs/baseline.out`.
 
-Wait for the response.
+```
+── Role-prompting ────────────────────────────────────────────
+```
+Print the contents of `02-prompting/apply/outputs/role.out`.
 
-If they have written the variants: run each one with `claude --print "$(cat <filename>)"` and print the outputs in sequence, each under a labeled heading (Baseline / Role / Chain-of-thought / Few-shot).
+```
+── Chain-of-thought ──────────────────────────────────────────
+```
+Print the contents of `02-prompting/apply/outputs/cot.out`.
 
-If they have not written the variants: help them write each one as a file in this directory:
-- baseline.md — the task with no technique
-- role.md — same task with a role prefix ("You are a senior support engineer...")
-- cot.md — same task with "Think through each ticket step by step before classifying."
-- few-shot.md — same task with 2 worked examples prepended
-
-After writing, run all four variants and print the outputs with labeled headings.
+```
+── Few-shot ──────────────────────────────────────────────────
+```
+Print the contents of `02-prompting/apply/outputs/few-shot.out`.
 
 End with:
 ```
 ── Techniques comparison complete ─────────────────────────────
-Fill in the observation table in README.md.
+Compare the four outputs above. Discuss what changed and why.
+Outputs were captured from a prior `claude --print` run for fast in-class display.
+To re-run any variant live: claude --print "$(cat 02-prompting/apply/<variant>.md)"
 ──────────────────────────────────────────────────────────────
 ```
+
+If any of the four `.out` files is missing, stop and print which file is missing. Do not regenerate them — the missing file should be re-captured offline before the next demo.

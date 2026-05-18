@@ -1,56 +1,68 @@
-# 02-prompting / Apply — Write your workflow's prompt
+# 02-prompting / Apply — Three techniques, one task
 
-**Objective:** Apply chain-of-thought, few-shot, and role-prompting. Document when each technique changes output quality.
+**Objective:** Show how role-prompting, chain-of-thought, and few-shot change Claude's output on the same task.
 
-**Concept:** Three techniques address different failure modes. Role-prompting fixes the wrong audience or expertise level. Chain-of-thought helps when the model jumps to conclusions. Few-shot fixes mismatched output format.
+**Concept:** Three techniques address different failure modes. Role-prompting fixes tone and decisiveness. Chain-of-thought helps when the model jumps to conclusions on ambiguous input. Few-shot locks output format.
 
 **Time:** 30 minutes
 
-## Steps
+## Demo setup
 
-1. Choose a task. Use this one or substitute your own:
-   > "Given a list of user support tickets, identify which ones are bugs vs. feature requests and assign a priority (P1/P2/P3)."
+All four prompt variants are already written in this directory:
 
-2. Write a baseline prompt (no techniques) and run it:
+| File | Technique |
+|---|---|
+| `baseline.md` | No technique — the task as-is |
+| `role.md` | Adds an opinionated role: blunt on-call engineer |
+| `cot.md` | Adds a 3-step reasoning scaffold |
+| `few-shot.md` | Adds 2 worked examples forcing a strict table format |
+
+The task is the same in all four: classify six support tickets as Bug vs. Feature Request and assign P1/P2/P3. One ticket — *"Sometimes the app feels slow"* — is deliberately ambiguous. Watch how each technique handles it.
+
+## Run the demo
+
+```bash
+/prompt-techniques
 ```
-Given a list of user support tickets, identify which ones are bugs vs. feature requests and assign a priority (P1/P2/P3).
 
-Tickets:
-- "App crashes when uploading files larger than 10MB"
-- "Add dark mode to the dashboard"
-- "Login button doesn't work on Safari 16"
-- "Would be nice to export data as CSV"
+This prints all four outputs **instantly** under labeled headings (Baseline / Role / Chain-of-thought / Few-shot). Outputs are pre-recorded in `outputs/` so the demo doesn't stall on live model calls.
+
+To re-run any variant live (slower — wait ~30–60s per call):
+```bash
+claude --print "$(cat baseline.md)"   # or role.md / cot.md / few-shot.md
 ```
 
-3. Apply **role-prompting**: add a role to the prompt. Run it. Note any difference.
+To refresh the pre-recorded outputs (e.g. after editing a prompt), run from a directory *outside* this one so the project's CLAUDE.md doesn't contaminate the prompt:
+```bash
+cd /tmp && claude --print "$(cat <abs-path>/baseline.md)" > <abs-path>/outputs/baseline.out
+```
 
-4. Apply **chain-of-thought**: add "Think through each ticket step by step before assigning." Run it. Note any difference.
+## What to point out on screen
 
-5. Apply **few-shot**: add 2 worked examples before the ticket list. Run it. Note any difference.
+**Baseline** — Free-form prose. Hedging words ("could be", "might"). The ambiguous ticket gets a guess with no justification.
 
-6. Fill in the observation table:
+**Role-prompting** — Tone shift. No hedging. Decisive priority calls. The blunt persona produces shorter, more confident output. Same classifications, different voice.
 
-| Technique | Did it change the output? | How? (format / accuracy / depth) |
+**Chain-of-thought** — Visible reasoning before each answer. On the ambiguous ticket, the model states its assumption out loud (e.g., *"assuming this is a performance regression, not a UX complaint"*). The answer is the same kind of answer, but you can now see *why*.
+
+**Few-shot** — Output format locks to the example table. No prose. The `Reason` column appears even though the user never asked for one — the examples taught the schema.
+
+## Observation table (pre-filled for reference)
+
+| Technique | Did it change the output? | How? |
 |---|---|---|
-| Role-prompting | | |
-| Chain-of-thought | | |
-| Few-shot | | |
-
-## Expected output
-
-Role-prompting: may change tone or expertise level but often does not change the classification result for a simple task.
-
-Chain-of-thought: shows reasoning before the conclusion. It helps most with ambiguous tickets.
-
-Few-shot: constrains the output format — if your examples show a specific table format, the output matches it.
+| Role-prompting | Yes | Tone became blunt and decisive; hedging removed; classifications mostly unchanged |
+| Chain-of-thought | Yes | Reasoning printed before each answer; ambiguity surfaced as explicit assumptions |
+| Few-shot | Yes | Output became a strict markdown table matching the example schema, including a `Reason` column |
 
 ## Verification checklist
 
-1. Ran the baseline prompt without any technique.
-2. Applied each technique (role, chain-of-thought, few-shot) separately and ran each.
-3. Filled in the observation table with at least one entry per technique.
-4. Can describe a task where chain-of-thought would not improve output quality (simple, deterministic tasks).
-5. Can describe a task where few-shot is necessary (when output format matters more than reasoning).
+1. Ran `/prompt-techniques` and saw four labeled outputs.
+2. Pointed out the tone shift between baseline and role.
+3. Pointed out the visible reasoning steps in chain-of-thought, especially on the ambiguous ticket.
+4. Pointed out that few-shot locked the output format to the example schema.
+5. Can describe a task where chain-of-thought would *not* improve output (simple, deterministic tasks).
+6. Can describe a task where few-shot is necessary (when output format matters more than reasoning).
 
 ## Workflow checkpoint
 
@@ -64,7 +76,7 @@ Status: tested
 
 Commit:
 ```bash
-git add 02-prompting/apply/workflow-prompt.md 02-prompting/apply/notes.md my-workflow.md
+git add 02-prompting/apply/baseline.md 02-prompting/apply/role.md 02-prompting/apply/cot.md 02-prompting/apply/few-shot.md 02-prompting/apply/workflow-prompt.md my-workflow.md
 git commit -m "02-prompting/apply: workflow prompt written and tested"
 ```
 

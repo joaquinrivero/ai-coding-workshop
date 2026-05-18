@@ -1,0 +1,17 @@
+I'll categorize these tickets by type and assign priorities based on severity and impact:
+
+| Ticket | Type | Priority | Reasoning |
+|--------|------|----------|-----------|
+| App crashes when uploading files >10MB | Bug | P1 | Critical functionality broken; likely blocking users from completing core workflows |
+| Login button doesn't work on Safari 16 | Bug | P1 | Authentication failure across a major browser; prevents access entirely |
+| Sometimes the app feels slow | Bug | P2 | Performance issue affecting UX but not blocking core features; needs investigation |
+| Add dark mode to the dashboard | Feature | P2 | Nice-to-have UX improvement; common request but not critical |
+| Notifications should be configurable per project | Feature | P2 | Usability enhancement; likely requested by multiple users managing multiple projects |
+| Would be nice to export data as CSV | Feature | P3 | Data export is useful but not essential; workarounds likely exist |
+
+**Summary:**
+- **2 P1 bugs** (crashes, auth failures) — fix immediately
+- **1 P2 bug** (performance) — investigate root cause and profile
+- **3 feature requests** (2 P2, 1 P3) — prioritize based on user demand and effort
+
+The bugs address *broken functionality* while features add *new capabilities*. P1 issues block core workflows; P2 issues degrade experience or have moderate impact; P3 is nice-to-have with workarounds.

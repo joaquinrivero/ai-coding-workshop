@@ -1,0 +1,41 @@
+**Ticket 1: "App crashes when uploading files larger than 10MB"**
+1. Bug — a crash is broken behavior, not a missing capability.
+2. Anyone uploading files >10MB is fully blocked, and there is no client-side workaround once the crash happens. Crashes also risk data loss. Treating uploads as a core path, this hits many users hard.
+3. Ambiguous how common >10MB uploads are. Assumption: file upload is a core feature and the 10MB threshold is reachable in normal use.
+
+Classification: **Bug, P1**
+
+**Ticket 2: "Add dark mode to the dashboard"**
+1. Feature request — net-new capability, no existing behavior is broken.
+2. Pure preference/comfort. Light mode still works for everyone, so impact is cosmetic.
+3. No real ambiguity. Assumption: there is no partial dark mode already shipped.
+
+Classification: **Feature, P3**
+
+**Ticket 3: "Login button doesn't work on Safari 16"**
+1. Bug — login is supposed to work and doesn't on a supported browser.
+2. Every Safari 16 user is locked out entirely. The only "workaround" is switching browsers, which many users won't or can't do. Safari has meaningful share.
+3. Ambiguous whether other Safari versions are also affected, or only 16. Assumption: Safari is officially supported, and at minimum Safari 16 is broken end-to-end.
+
+Classification: **Bug, P1**
+
+**Ticket 4: "Would be nice to export data as CSV"**
+1. Feature request — phrasing ("would be nice") and substance (new export format) both point to new capability.
+2. Workflow inconvenience, not a blocker. Users can likely read the data in-app today.
+3. Ambiguous whether any export exists already (e.g., JSON, copy). Assumption: no CSV export today; some viewing path exists.
+
+Classification: **Feature, P3**
+
+**Ticket 5: "Sometimes the app feels slow"**
+1. Bug-leaning — performance degradation against expected behavior — but written as a vague perception, not a defect with repro.
+2. Real but intermittent annoyance. Users aren't blocked; they wait. Without scope (which screen, how slow, how often), it's hard to call broad.
+3. Highly ambiguous: no repro, no surface, no metric, no environment. Assumption: this is a genuine perf complaint worth triaging, but needs telemetry/repro before it can be sized — treating as a known-issue investigation, not a fix-now item.
+
+Classification: **Bug, P2**
+
+**Ticket 6: "Notifications should be configurable per project"**
+1. Feature request — adds a new configuration axis; current behavior isn't broken, just coarse.
+2. Users with multiple projects get noise they can't tune; workaround is tolerating it or muting globally. Affects power users / multi-project users specifically.
+3. Ambiguous whether any per-user notification config exists today. Assumption: notifications are currently global (on/off) with no per-project scoping.
+
+Classification: **Feature, P2**

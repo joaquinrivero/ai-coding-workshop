@@ -1,0 +1,8 @@
+| Ticket | Type | Priority | Reason |
+|---|---|---|---|
+| App crashes when uploading files larger than 10MB | Bug | P1 | Crash blocks a core flow; no workaround for users with large files. |
+| Add dark mode to the dashboard | Feature Request | P3 | New capability; cosmetic preference, no user blocked. |
+| Login button doesn't work on Safari 16 | Bug | P1 | Auth broken on a major browser; affected users cannot access the app. |
+| Would be nice to export data as CSV | Feature Request | P3 | New capability; phrased as nice-to-have, no user blocked. |
+| Sometimes the app feels slow | Bug | P2 | Degraded performance in existing functionality; vague repro lowers urgency. |
+| Notifications should be configurable per project | Feature Request | P2 | New capability; addresses a concrete usability gap for multi-project users. |
